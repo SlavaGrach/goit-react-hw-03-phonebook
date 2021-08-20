@@ -58,14 +58,13 @@ export class App extends Component {
     });
   };
 
-  handleChangeFilter = evt => {
+  handleChangeFilter = e => {
     this.setState({
-      [evt.target.name]: evt.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
   render() {
-    // console.log(this.state.filter);
     const contacts = filterContacts(this.state.contacts, this.state.filter);
 
     return (
